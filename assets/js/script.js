@@ -20,20 +20,24 @@ saveBtn.forEach((btn) => {
       savedMsgEl.setAttribute("class", "hide");
     }, 1000);
   });
+
+  saveInput();
 });
 
 //save input to local storage - description input needs to correspond with following button - ??
+function saveInput() {
 
+}
 /*
 //if current hour < time , set bg to class "past"
 if (currentHr <  ) {
-  descriptionEl.classList.add("past")
+  descriptionEl.classList.add("past");
 }
 //if time === current hour, set bg to class "present"
 if (currentHr === ) {
-  descriptionEl.classList.add("past")
+  descriptionEl.classList.add("present");
 }
 //if current hr > time set bg to class "future"
 if (currentHr > ) {
-
+  descriptionEl.classList.add("future");
 } */

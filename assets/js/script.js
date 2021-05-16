@@ -1,6 +1,5 @@
 var currentDayEl = $('#currentDay');
-var savedMsgEl = $('#saved-message');
-var saveBtn = $('#saveBtn');
+var currentHr = moment().format("H")
 
 //current date in header
 function displayDate() {
@@ -8,28 +7,28 @@ function displayDate() {
     currentDayEl.text(currentDay);
   }
 
-  displayDate();
+displayDate();
 
 //flash "Saved!" when saved button pressed - code incorrect
-saveBtn.addEventListener("click", saved);
-
- function saved() {
-   savedMsgEl.setAttribute("class", "show");
-  setTimeout(function() {
-    savedMsgEl.setAttribute("class", "hide");;
-  }, 1000);
+//will not work, id can only apply to 1 button, how to target by class?
+function savedMsg() {
+  var savedMsgEl = document.getElementById("saved-message");
+  savedMsgEl.setAttribute("class", "text-center");
+setTimeout(function() {
+  savedMsgEl.setAttribute("class", "hide");;
+}, 1000);
 }
+document.getElementById("saveBtn").addEventListener("click", savedMsg);
 
-/*
-//if current hour < time , change bg to class "past"
-if ( < ) {
+//if current hour < time , set bg to class "past"
+//if ( < ) {
 
-}
-//if time === current hour, change bg to class "present"
-if ( === ) {
+//}
+//if time === current hour, set bg to class "present"
+//if ( === ) {
 
-}
-//if current hr > time change bg to class "future"
-if ( > ) {
+//}
+//if current hr > time set bg to class "future"
+//if ( > ) {
 
-} */
+//} 

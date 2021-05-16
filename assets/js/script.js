@@ -29,15 +29,16 @@ function saveInput() {
 
 }
 /*
-//if current hour < time , set bg to class "past"
+//compare current hour to timeblock hour (for loop?)
+//if current hour < hour , set bg to class "past"
 if (currentHr <  ) {
   descriptionEl.classList.add("past");
 }
-//if time === current hour, set bg to class "present"
+//if hour === current hour, set bg to class "present"
 if (currentHr === ) {
   descriptionEl.classList.add("present");
 }
-//if current hr > time set bg to class "future"
+//if current hr > hour set bg to class "future"
 if (currentHr > ) {
   descriptionEl.classList.add("future");
 } */

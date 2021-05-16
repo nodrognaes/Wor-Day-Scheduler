@@ -21,6 +21,10 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 .description {
   white-space: pre-wrap;
 }
@@ -61,7 +65,7 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #093b69;
   color: white;
 }
 

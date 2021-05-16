@@ -1,5 +1,7 @@
 var currentDayEl = $('#currentDay');
 var currentHr = moment().format("H")
+var saveBtn = document.querySelectorAll(".saveBtn");
+var descriptionEl = $(".description");
 
 //current date in header
 function displayDate() {
@@ -9,26 +11,29 @@ function displayDate() {
 
 displayDate();
 
-//flash "Saved!" when saved button pressed - code incorrect
-//will not work, id can only apply to 1 button, how to target by class?
-function savedMsg() {
-  var savedMsgEl = document.getElementById("saved-message");
-  savedMsgEl.setAttribute("class", "text-center");
-setTimeout(function() {
-  savedMsgEl.setAttribute("class", "hide");;
-}, 1000);
-}
-document.getElementById("saveBtn").addEventListener("click", savedMsg);
+//flash "Saved!" when saved button pressed
+saveBtn.forEach((btn) => {
+  btn.addEventListener("click", function() {
+    var savedMsgEl = document.getElementById("saved-message");
+    savedMsgEl.setAttribute("class", "text-center");
+    setTimeout(function() {
+      savedMsgEl.setAttribute("class", "hide");
+    }, 1000);
+  });
+});
 
+//save input to local storage - description input needs to correspond with following button - ??
+
+/*
 //if current hour < time , set bg to class "past"
-//if ( < ) {
-
-//}
+if (currentHr <  ) {
+  descriptionEl.classList.add("past")
+}
 //if time === current hour, set bg to class "present"
-//if ( === ) {
-
-//}
+if (currentHr === ) {
+  descriptionEl.classList.add("past")
+}
 //if current hr > time set bg to class "future"
-//if ( > ) {
+if (currentHr > ) {
 
-//} 
+} */

@@ -25,6 +25,10 @@ textarea {
   visibility: hidden;
 }
 
+.show {
+  visibility: visible;
+}
+
 .description {
   white-space: pre-wrap;
 }
